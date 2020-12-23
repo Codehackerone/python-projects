@@ -1,0 +1,5 @@
+file=open("data.txt","r")
+text=file.read()
+file.close()
+file1=open("data.txt","w")
+file1.write(text+"\n"+text+"\n"+text)

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Super Geocoder App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Super Geocoder App</h1>
+        <h3>Upload the .csv file and it should contain address or Address column</h3>
+        <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+          <input type="file" name="file" >
+          <button type="submit"> Submit </button>
+        <div class="message">
+          <center>{{mytext | safe}}</center>
+        </div>
+        </form>
+        {% include [btn] ignore missing %}
+      </div>
+    </body>
+</html>
